@@ -3,6 +3,8 @@ package catalog;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
+import java.math.BigDecimal;
+
 import org.junit.Test;
 
 public class ProductTest {
@@ -12,7 +14,15 @@ public class ProductTest {
 	@Test
 	public void shouldHaveName() {
 		String name = "lawn chair";
-		underTest = new Product(name);
+		underTest = new Product(name, null);
 		assertThat(underTest.getName(), is(name));
+	}
+	
+	@Test
+	public void shouldHavePrice() {
+		BigDecimal price = new BigDecimal(1);
+		underTest = new Product("name", price);
+		BigDecimal actual = underTest.getPrice();
+		assertThat(actual, is(price));
 	}
 }
