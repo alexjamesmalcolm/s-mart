@@ -16,4 +16,8 @@ public class Product {
 		return new BigDecimal(1);
 	}
 
+	public int getQuantity() {
+		return 10;
+	}
+
 }

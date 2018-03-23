@@ -25,4 +25,12 @@ public class ProductTest {
 		BigDecimal actual = underTest.getPrice();
 		assertThat(actual, is(price));
 	}
+	
+	@Test
+	public void shouldHaveQuantity() {
+		int quantity = 10;
+		underTest = new Product("name", null);
+		int actual = underTest.getQuantity();
+		assertThat(actual, is(quantity));
+	}
 }
