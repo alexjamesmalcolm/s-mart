@@ -12,4 +12,8 @@ public class CartItem {
 		return product;
 	}
 
+	public int getQuantity() {
+		return 2;
+	}
+
 }
