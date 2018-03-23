@@ -2,10 +2,8 @@ package catalog;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Matchers.anySet;
 
 import java.math.BigDecimal;
-import java.util.Set;
 
 import org.junit.Test;
 
@@ -42,12 +40,5 @@ public class ProductTest {
 		underTest = new Product("chair", new BigDecimal(1), 1);
 		String actual = underTest.getDescription();
 		assertThat(actual, is(description));
-	}
-	
-	@Test
-	public void shouldHaveCarts() {
-		underTest = new Product("chair", new BigDecimal(1), 1);
-		Set<Cart> carts = underTest.getCarts();
-		assertThat(carts, is(anySet()));
 	}
 }
