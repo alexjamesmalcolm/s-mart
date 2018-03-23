@@ -14,14 +14,14 @@ public class ProductTest {
 	@Test
 	public void shouldHaveName() {
 		String name = "lawn chair";
-		underTest = new Product(name, null);
+		underTest = new Product(name, null, 1);
 		assertThat(underTest.getName(), is(name));
 	}
 	
 	@Test
 	public void shouldHavePrice() {
 		BigDecimal price = new BigDecimal(1);
-		underTest = new Product("name", price);
+		underTest = new Product("name", price, 1);
 		BigDecimal actual = underTest.getPrice();
 		assertThat(actual, is(price));
 	}
@@ -29,8 +29,16 @@ public class ProductTest {
 	@Test
 	public void shouldHaveQuantity() {
 		int quantity = 10;
-		underTest = new Product("name", null);
+		underTest = new Product("name", null, quantity);
 		int actual = underTest.getQuantity();
 		assertThat(actual, is(quantity));
+	}
+	
+	@Test
+	public void shouldHaveDescription() {
+		String description = "good chair";
+		underTest = new Product("chair", new BigDecimal(1), 1);
+		String actual = underTest.getDescription();
+		assertThat(actual, is(description));
 	}
 }
