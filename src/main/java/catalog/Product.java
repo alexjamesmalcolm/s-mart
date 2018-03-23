@@ -1,6 +1,8 @@
 package catalog;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Product {
 
@@ -22,6 +24,11 @@ public class Product {
 
 	public String getDescription() {
 		return "good chair";
+	}
+
+	public Set<Cart> getCarts() {
+		Set<Cart> carts = new HashSet<Cart>();
+		return carts;
 	}
 
 }
