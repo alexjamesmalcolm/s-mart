@@ -1,4 +1,4 @@
-package catalog;
+package smart.catalog;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -6,6 +6,8 @@ import static org.junit.Assert.assertThat;
 import java.math.BigDecimal;
 
 import org.junit.Test;
+
+import smart.catalog.Product;
 
 public class ProductTest {
 	

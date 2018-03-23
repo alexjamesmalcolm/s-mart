@@ -1,4 +1,4 @@
-package catalog;
+package smart.catalog;
 
 import java.math.BigDecimal;
 

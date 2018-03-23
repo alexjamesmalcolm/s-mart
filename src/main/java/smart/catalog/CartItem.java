@@ -1,4 +1,4 @@
-package catalog;
+package smart.catalog;
 
 public class CartItem {
 
