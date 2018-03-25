@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>S-Mart</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>S-Mart</h1>
+			<small>Shop smart shop S-Mart</small>
+			<nav>
+				<ul>
+					<li>
+						<a href="/cart">Cart</a>
+					</li>
+				</ul>
+			</nav>
+			<a href="https://github.com/alexjamesmalcolm/s-mart" class="fork-me">
+				Fork me on GitHub
+			</a>
+		</header>
+		<main>
+			<h2>Inventory</h2>
+			<section class="product" th:each="product : ${products}">
+				<h3 th:text="product.name">Product</h3>
+				<img th:src="product.imageUrl"/>
+				<summary th:text="product.shortDescription">Quick description</summary>
+				<details th:text="product.longDescription">Detailed description</details>
+				<p>Price: <span th:text="product.price">$10.00</span></p>
+				<p><span th:text="product.quantity">20</span> items left</p>
+			</section>
+		</main>
+		<footer>
+			<small>Website made by <a href="http://alexjamesmalcolm.com">Alex Malcolm</a></small>
+		</footer>
+	</div>
+</body>
+</html>
